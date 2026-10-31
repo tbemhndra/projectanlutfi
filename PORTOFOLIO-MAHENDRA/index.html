@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portofolio-LM</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+    <svg width="0" height="0" style="position:absolute">
+  <filter id="kw" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -0.5 -0.5 -0.5 1.5 0"/>
+  </filter>
+</svg>
+<canvas id="stars"></canvas><div class="glow"></div>
+<nav id="nav"><a href="#home" class="on">Home</a><a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a><button id="snd" title="Musik">🔊</button></nav>
+
+<section id="home">
+ <div class="rv">
+  <h1><span>Welcome to</span><br>My Portfolio</h1>
+  <div class="role" id="role"></div>
+  <p class="lead">Fresh graduate in Management With an interest in administration, data processing, and reporting</p>
+  <div class="btns">
+   <a class="btn p" href="#portfolio">Lihat Projek →</a>
+   <a class="btn" href="#contact">Hubungi Saya ➤</a>
+  </div>
+  <div class="find">FIND ME
+ <a href="https://instagram.com/tbemhndra" target="_blank" rel="noopener" aria-label="Instagram">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+ </a>
+ <a href="https://tiktok.com/@tbemhndr" target="_blank" rel="noopener" aria-label="TikTok">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+  </a>
+</div>
+</div>
+
+ <div id="lan">
+  <!-- SVG TALI + KLIP BESI (MENYATU PERMANEN DI SATU KANVAS) -->
+  <svg id="lanyard-svg">
+    <defs>
+      <!-- Gradien Tekstur Lanyard Hitam -->
+      <linearGradient id="lanyardGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#080a0f"/>
+        <stop offset="25%" stop-color="#1e222d"/>
+        <stop offset="50%" stop-color="#2d3342"/>
+        <stop offset="75%" stop-color="#1e222d"/>
+        <stop offset="100%" stop-color="#080a0f"/>
+      </linearGradient>
+      <!-- Gradien Logam Chrome Mengkilap -->
+      <linearGradient id="chromeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#ffffff"/>
+        <stop offset="35%" stop-color="#a4abb8"/>
+        <stop offset="70%" stop-color="#ffffff"/>
+        <stop offset="100%" stop-color="#6a717e"/>
+      </linearGradient>
+      <!-- Bayangan Tali -->
+      <filter id="strapShadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity="0.6"/>
+      </filter>
+    </defs>
+
+    <!-- Tali Utama -->
+   <path id="strap-core"
+      d=""
+      fill="url(#lanyardGrad)"
+      stroke="none"
+      filter="url(#strapShadow)"/>
+    <!-- Jahitan Samping -->
+    <path id="strap-stitch-l" d="" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-dasharray="4 3" fill="none"/>
+    <path id="strap-stitch-r" d="" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-dasharray="4 3" fill="none"/>
+
+    <!-- Tulisan nama yang mengikuti puntiran lanyard -->
+<path id="strap-text-path" d="" fill="none"/>
+<g id="strap-text-group"></g>
+
+    <!-- Cincin Cantolan di Atas Langit-langit (DIEM DI TEMPAT) -->
+    <circle id="anchor-pin" cx="0" cy="0" r="10" fill="#141822" stroke="#b0b7c3" stroke-width="3.5"/>
+
+    <!-- KLIP LOGAM CHROME LENGKAP DENGAN RING BULAT (TERKUNCI MATI DENGAN TALI) -->
+    <g id="clip-svg-group">
+      <!-- Besi Putih Bulat (Ring Klip) -->
+      <circle cx="0" cy="0" r="10" fill="none" stroke="url(#chromeGrad)" stroke-width="3.5"/>
+      <!-- Leher Swivel -->
+      <rect x="-4.5" y="9" width="9" height="9" rx="2" fill="url(#chromeGrad)"/>
+      <!-- Penjepit Bawah (Clamp) -->
+      <rect x="-12" y="16" width="24" height="18" rx="4" fill="url(#chromeGrad)" stroke="rgba(255,255,255,0.7)" stroke-width="0.8"/>
+      <rect x="-5" y="26" width="10" height="3" rx="1.5" fill="#090c12"/>
+    </g>
+  </svg>
+
+  <!-- WADAH KARTU ID (MENEMPEL DI BAWAH PENJEPIT KLIP) -->
+  <div id="lanyard-card">
+    <div class="card-holder">
+      <!-- Putaran 3D Saat Diklik -->
+      <div class="card-flip" id="card-flip">
+        <!-- Sisi Depan -->
+        <div class="card-side card-front">
+          <div class="card-header-bar">
+            <span class="badge-tag">PORTOFOLIO</span>
+            <span class="badge-sub">MANAGEMENT</span>
+          </div>
+          <div class="card-portrait" style="background-image:url('images/foto-formal-1.png')"></div>
+          <div class="card-details">
+            <h3>LUTFI MAHENDRA</h3>
+            <p>Fresh Graduate • S1 Manajemen</p>
+          </div>
+          <div class="card-footer-bar">
+            <small>Universitas Prof. Dr. Moestopo (Beragama)</small>
+            <span class="status-pulse"></span>
+          </div>
+          <div class="card-glare"></div>
+        </div>
+
+        <!-- Sisi Belakang -->
+        <div class="card-side card-back">
+          <div class="card-header-bar" style="justify-content:center">
+            <b style="color:#fff;letter-spacing:1.5px;font-size:11px">SCAN HERE</b>
+          </div>
+          <div class="qr-container">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://instagram.com/tbemhndra" alt="QR Code">
+          </div>
+          <div class="card-details" style="text-align:center">
+            <p style="color:#5aa0ff;font-weight:700;font-size:12px;letter-spacing:.5px">CONNECT WITH ME</p>
+            <p style="color:#fff;font-size:11px;margin-top:2px">@tbemhndra</p>
+          </div>
+          <div class="card-footer-bar" style="justify-content:center">
+            <small style="color:var(--mu);font-size:10px">Klik untuk membalik kartu ↺</small>
+          </div>
+          <div class="card-glare"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="about">
+ <h2 class="ttl rv">About Me</h2>
+ <div class="about rv"><div><h2><span style="color:#3f7bf0">Hi, I'm</span><br>Lutfi<br>Mahendra</h2><br><a class="btn p" href="#contact">Hubungi Saya</a></div>
+  <div class="me"><img src="images/foto-formal-1.png" alt=""><img class="alt" src="images/spiderman opacity.jpeg" alt=""></div>
+  <div><p>Saya adalah <b>Fresh graduate</b> lulusan S1 Manajemen yang memiliki minat pada bidang administrasi dan pengolahan data. Memiliki kemampuan dalam menggunakan Microsoft Excel untuk mengolah data, melakukan perhitungan menggunakan rumus, serta menyusun dan merapikan data secara sistematis. Saya merupakan pribadi yang teliti, terorganisir, bertanggung jawab, dan memiliki kemauan belajar yang tinggi.</p><p>Saya siap mengembangkan kemampuan serta memperoleh pengalaman profesional untuk mendukung kelancaran operasional perusahaan.</p><a class="btn" href="#portfolio">&lt;/&gt; Lihat Projek ↗</a></div></div>
+ <div class="edu rv"><div><h4>Education</h4>
+  <div class="it"><img src="images/averus-logo.jpeg" alt=""><div><b>SMK Averus Jakarta</b><small>Sekolah Menengah Kejuruan</small><i>2019 - 2022</i></div></div>
+  <div class="it"><img src="images/moestopo-logo.jpg" alt=""><div><b>Universitas Prof. Dr. Moestopo (Beragama)</b><small>S1 - Manajemen</small><i>2022 - 2026</i></div></div></div>
+  <div><h4>Experience</h4><div class="it"><img src="images/moestopo-logo.jpg" alt=""><div><b>Universitas Prof. Dr. Moestopo (Beragama)<p>Pelatihan manajemen organisasi</p></b><small>Mentor & Dokumentasi</small></div></div></div></div>
+ <div class="stats rv">
+ <div class="st">
+  <div class="tp"><span class="ic"><svg viewBox="0 0 24 24"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></span><big>4</big></div>
+  <b>INDEPENDENT PROJECTS</b><small>Karya yang dibuat hasil latihan</small>
+ </div>
+ <div class="st">
+  <div class="tp"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span><big>1</big></div>
+  <b>EXPERIENCE ORGANISASI</b><small>Pengalaman saat organisasi kampus</small>
+ </div>
+ <div class="st">
+  <div class="tp"><span class="ic"><svg viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span><big>0</big></div>
+  <b>AWARDS</b><small>Pencapaian diraih</small>
+ </div>
+</div>
+ <div class="music rv"><div><h3>A little <span style="color:#9aa3b8;display:inline">music.</span><span>A lot of ideas.</span></h3><p>Musik yang menemani proses saya mengubah ide menjadi sesuatu yang nyata. Intip playlist yang sedang sering saya putar.</p><a class="btn" <a class="btn" href="https://open.spotify.com/playlist/ID_PLAYLIST_LU" target="_blank" rel="noopener">♫ Daily Rotation di Spotify ↗</a></div>
+  <div class="spe">
+ <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5IUZskxr3WU8nwXn65q29e?utm_source=generator&si=c4c721fb95904ceb" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
+</section>
+
+<section id="portfolio">
+ <h2 class="ttl rv">Portfolio</h2>
+ <div class="tabs"><button class="on" data-t="p">&lt;/&gt; Projects</button><button data-t="c">Experience</button><button data-t="a">Achievements</button><button data-t="s">Tools/Software</button></div>
+ <div class="grid" id="g-p"></div>
+ <div class="grid h" id="g-c"></div><div class="grid h" id="g-a"></div><div class="grid h" id="g-s"></div>
+</section>
+
+<div id="det"><div class="crumb"><button class="btn" id="back">← Back</button><span>Projects</span>›<b id="dc" style="color:#fff"></b></div>
+ <div class="dg"><div><h2 id="dt"></h2><p id="dd"></p><h5>&lt;/&gt; Technologies Used</h5><div class="tg" id="dtg"></div></div><div class="pi" id="di"></div></div></div>
+
+<section id="contact">
+ <h2 class="ttl rv">Hubungi saya</h2>
+ <div class="cg rv"><div class="pn"><h3>Hubungi</h3><p>Ada yang mau didiskusikan? Langsung kirim pesan aja ya...</p>
+  <label>Nama</label><input id="mn" placeholder="Nama Anda"><label>Email</label><input id="me" placeholder="Email Anda"><label>Pesan</label><textarea id="mp" placeholder="Pesan Anda"></textarea>
+<button class="btn p" id="ms">➤ Kirim Pesan</button><h4 style="margin:24px 0 10px;font-size:13px;letter-spacing:1px">FIND ME</h4>
+<div class="fm">
+ <a class="sc" href="https://instagram.com/tbemhndra" target="_blank" rel="noopener">
+  <span class="ico ig"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span>
+  <div><b>Instagram</b><small>tbemhndra</small></div>
+  <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+ </a>
+ <a class="sc" href="https://tiktok.com/@tbemhndr" target="_blank" rel="noopener">
+  <span class="ico"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
+  <div><b>TikTok</b><small>@tbemhndr</small></div>
+  <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+ </a>
+ <a class="sc" href="mailto:lutfimahendra91@gmail.com">
+  <span class="ico gm"><svg viewBox="0 0 24 24" fill="none" stroke="#ea4335" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+  <div><b>Gmail</b><small>lutfimahendra91@gmail.com</small></div>
+  <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+ </a>
+</div>
+
+  </div>
+  <div class="pn"><h3 style="color:#fff;font-size:16px">Komentar (<span id="cn">0</span>)</h3>
+  <label>Nama</label><input id="cnm" placeholder="Masukkan nama kamu"><label>Komentar</label><textarea id="ctx" placeholder="Tulis komentar kamu di sini..."></textarea>
+  <label>Foto Profil (opsional)</label><input type="file" accept="image/*"><small style="color:var(--mu)">Ukuran file maksimal 5 MB</small>
+  <button class="btn p" id="cs">➤ Kirim Komentar</button><div id="cl" style="margin-top:14px"></div></div></div>
+</section>
+<footer>© 2026 — Persented by: Lutfi Mahendra</footer>
+<div id="lb"><img alt=""></div>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script src="script.js"></script>
+</body></html>
